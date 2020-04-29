@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
 <form class="register-form" action="RegisterServlet">
       <input type="text" placeholder="login" name="loginReg"/>
       <input type="text" placeholder="first name" name="firstName"/>

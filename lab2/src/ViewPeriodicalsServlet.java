@@ -24,24 +24,18 @@ public class ViewPeriodicalsServlet extends HttpServlet {
 	
 			Connection con = DatabaseConnection.initializeDatabase();
 			
-			PreparedStatement stmt = con.prepareStatement(
-					"select * from \"readers\" where \"Login\"='" + Controller.currentUser + "'"
-					);
-			ResultSet rs = stmt.executeQuery();
-			
-			if (!rs.next()) return;
-				
-			out.println("You are user #" + rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
-			out.println("Here are all periodicals: ");
 			PreparedStatement stmt1 = con.prepareStatement(getAllPeriodicalsQuery);
 			ResultSet rs1 = stmt1.executeQuery();
 			
+			out.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"><title>Periodicals</title><link rel=\"stylesheet\" href=\"templated-binary/assets/css/main.css\" /></head><body>");
+			out.println("<table><thead><tr><th>Name</th><th>Type</th></tr></thead><tbody>");
+
 			while (rs1.next()) {
 	
-				out.println(rs1.getString(3) + " \"" + rs1.getString(2) + "\"");
+				out.println("<tr><td>" + rs1.getString(2) + "</td><td>" + rs1.getString(3) + "</td></tr>");
 			}
-			
-			
+
+			out.println("</table></body></html>");
 			
 		} catch (Exception ex) {
 			System.out.println("Exception: " + ex.getMessage());
