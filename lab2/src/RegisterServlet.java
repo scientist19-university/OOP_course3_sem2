@@ -72,7 +72,6 @@ public class RegisterServlet extends HttpServlet {
 				System.out.println("Exception: " + ex1.getMessage());
 			}
 			
-			//out.println("Registration successful! You can now log in");
 			Controller.currentUser = login;
 			String path = "/mainPage.jsp";
 	        ServletContext servletContext = getServletContext();
@@ -82,10 +81,6 @@ public class RegisterServlet extends HttpServlet {
 		} catch (Exception ex) {
 			System.out.println("Exception: " + ex.getMessage());
 		}		
-	}
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 	}
 
 	private final String getReadersCountQuery = "select count(*) from readers";

@@ -20,10 +20,9 @@ public class SubscribePeriodicalServlet extends HttpServlet {
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//response.sendRedirect("subscribePeriodicalPage.jsp");
-
 		PrintWriter out = response.getWriter();
-		out.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"><title>Subscribe</title><link rel=\"stylesheet\" href=\"templated-binary/assets/css/main.css\" /></head><body>");
+		out.println("<html><head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=ISO-8859-1\"><title>Subscribe</title><link rel=\"stylesheet\" href=\"templated-binary/assets/css/main.css\" />" +
+	"<link rel=\"stylesheet\" href=\"adminStyle.css\"></head><body><div class=\"form\">");
 		
 		try {
 
@@ -41,11 +40,11 @@ public class SubscribePeriodicalServlet extends HttpServlet {
 			
 			out.println("</select>" +
 			   		"</p>" +
-			   		"<p><input type=\"number\" value=\"1\" name=\"months\"></p>" +
+			   		"<p><input type=\"number\" placeholder=\"number of months\" name=\"months\"></p>" +
 			   		"<p><input type=\"submit\" value=\"Subscribe\"></p>" +
 			  	"</form>");
 
-			out.println("</body></html>");
+			out.println("</div></body></html>");
 			
 			
 		} catch (Exception ex) {

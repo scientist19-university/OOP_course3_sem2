@@ -6,28 +6,39 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Personal account</title>
 		<link rel="stylesheet" href="templated-binary/assets/css/main.css" />
+		<link rel="stylesheet" href="adminStyle.css">
 </head>
 <body>
-<div>
-  <div>
-    
-    <form action="ViewReaderSubscriptionsServlet">
+<div class="form">
+		<h1>Main user menu</h1>
+		
+		<table>
+			<tr>
+				<td>
+	    		<form action="ViewReaderSubscriptionsServlet">
       <input type=submit value="View my subscriptions">
     </form>
-    
-    <form action="ViewAvailableSubscriptionsServlet">
+	    		</td>
+				<td>
+	    		<form action="ViewAvailableSubscriptionsServlet">
       <input type=submit value="View available subscriptions">
     </form>
-    
-    <form action="ViewPeriodicalsServlet">
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<td>
+	    		<form action="ViewPeriodicalsServlet">
       <input type=submit value="View periodicals">
     </form>
-    
-    <form action="SubscribePeriodicalServlet">
+	    		</td>
+	    		<td>
+	    		<form action="SubscribePeriodicalServlet">
       <input type=submit value="Subscribe periodical">
     </form>
-    
-  </div>
-</div>
+	    		</td>
+	    	</tr>
+    	</table>
+	</div>
+
 </body>
 </html>

@@ -5,14 +5,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add subscription</title>
+<link rel="stylesheet" href="templated-binary/assets/css/main.css" />
+<link rel="stylesheet" href="adminStyle.css" />
 </head>
 <body>
 
+	<div class="form">
 	<form action="AdminAddSubscriptionsServlet">
-        <input type="text" placeholder="Periodical name" name="periodical"/>
-        <input type="text" placeholder="Type" name="type"/>
-        <input type="number" placeholder="Cost per month" name="cost"/>
+        <input type="text" placeholder="Periodical name" name="periodical"/><br>
+        <input type="text" placeholder="Type" name="type"/><br>
+        <input type="number" placeholder="Cost per month" name="cost"/><br><br>
 		<input type=submit value="Add subscription">
 	</form>
+	</div>
 </body>
 </html>

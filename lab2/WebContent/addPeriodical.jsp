@@ -5,13 +5,17 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Add periodical</title>
+<link rel="stylesheet" href="templated-binary/assets/css/main.css" />
+<link rel="stylesheet" href="adminStyle.css" />
 </head>
 <body>
 
+	<div class="form">
 	<form action="AdminAddPeriodicalsServlet">
-        <input type="text" placeholder="Name" name="name"/>
-        <input type="text" placeholder="Type" name="type"/>
+        <input type="text" placeholder="Name" name="name"/><br>
+        <input type="text" placeholder="Type" name="type"/><br>
 		<input type=submit value="Add periodical">
 	</form>
+	</div>
 </body>
 </html>

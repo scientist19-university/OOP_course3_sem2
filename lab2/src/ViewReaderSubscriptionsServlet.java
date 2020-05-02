@@ -33,8 +33,6 @@ public class ViewReaderSubscriptionsServlet extends HttpServlet {
 			
 			if (!rs.next()) return;
 				
-			//out.println("You are user #" + rs.getInt(1) + " " + rs.getString(2) + " " + rs.getString(3));
-			//out.println("Here are your subscriptions: ");
 			PreparedStatement stmt1 = con.prepareStatement(subscriptionsByLoginQuery);
 			ResultSet rs1 = stmt1.executeQuery();
 

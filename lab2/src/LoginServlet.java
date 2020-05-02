@@ -23,10 +23,8 @@ public class LoginServlet extends HttpServlet {
 		String password = request.getParameter("password");
 		
 		PrintWriter out = response.getWriter();
-		out.println("Hello from servlet!");
 		
 		try {
-			
 			
 			Connection con = DatabaseConnection.initializeDatabase();
 			
