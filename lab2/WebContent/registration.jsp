@@ -13,6 +13,8 @@
       <input type="text" placeholder="login" name="loginReg"/>
       <input type="text" placeholder="first name" name="firstName"/>
       <input type="text" placeholder="last name" name="lastName"/>
+      <input type="text" placeholder="birth date (yyyy-mm-dd)" name="birthDate"/>
+      <input type="text" placeholder="male/female" name="sex"/>
       <input type="password" placeholder="password" name="passwordReg"/>
       <button>create</button>
       <p class="message">Already registered? <a href="index.html">Sign In</a></p>

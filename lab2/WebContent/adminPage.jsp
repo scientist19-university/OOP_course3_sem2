@@ -37,6 +37,50 @@
 	    		</form>
 	    		</td>
 	    	</tr>
+	    	<tr>
+	    		<td>
+	    		<form action="addTheme.jsp">
+	      			<input type=submit value="Add theme">
+	    		</form>
+	    		</td>
+	    		<td>
+	    		<form action="AdminAddThemeToPeriodicalServlet">
+	      			<input type=submit value="Add theme to periodical">
+	    		</form>
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<td>
+	    		<form action="ViewStatisticsServlet">
+	      			<input type=submit value="View statistics">
+	    		</form>
+	    		</td>
+	    		<td>
+	    		<form action="ViewThemesServlet">
+	      			<input type=submit value="View themes">
+	    		</form>
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<td>
+	    		<form action="ViewThemesPeriodicalsServlet">
+	      			<input type=submit value="View periodicals' themes">
+	    		</form>
+	    		</td>
+	    		<td>
+	    		<form action="ViewThemesReadersServlet">
+	      			<input type=submit value="View readers' preferences">
+	    		</form>
+	    		</td>
+	    	</tr>
+	    	<tr>
+	    		<td>
+	    		<form action="ViewReadersServlet">
+	      			<input type=submit value="View readers">
+	    		</form>
+	    		</td>
+	    		<td>
+	    	</tr>
     	</table>
 	</div>
 </body>

@@ -24,6 +24,8 @@ public class RegisterServlet extends HttpServlet {
 		String password = request.getParameter("passwordReg");
 		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
+		String birthDate = request.getParameter("birthDate");
+		String sex = request.getParameter("sex");
 		
 		PrintWriter out = response.getWriter();
 		
@@ -51,7 +53,7 @@ public class RegisterServlet extends HttpServlet {
 			
 			if (password.length() > 30) {
 
-				out.println("Password length must be from 0 to 30 symbols.");
+				out.println("Password length must be from 1 to 30 symbols.");
 				return;
 			}
 				
@@ -62,12 +64,12 @@ public class RegisterServlet extends HttpServlet {
 
 			
 			PreparedStatement stmt2 = con.prepareStatement(
-					"INSERT INTO public.readers(\"Id\", \"FirstName\", \"LastName\", \"Login\", \"Password\") VALUES ("+
-							nextId + ", '" + firstName + "', '" + lastName + "', '" + login + "', '" + password + "')"
+					"INSERT INTO public.readers(\"Id\", \"FirstName\", \"LastName\", \"Login\", \"Password\", \"BirthDate\", \"Sex\") VALUES ("+
+							nextId + ", '" + firstName + "', '" + lastName + "', '" + login + "', '" + password + "', '" + birthDate + "', '" + sex + "')"
 					);
 			try {
 				
-				stmt2.executeQuery();
+				stmt2.execute();
 			} catch (Exception ex1) {
 				System.out.println("Exception: " + ex1.getMessage());
 			}

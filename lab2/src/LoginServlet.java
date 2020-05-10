@@ -39,10 +39,15 @@ public class LoginServlet extends HttpServlet {
 						);
 				ResultSet rs1 = stmt1.executeQuery();
 				if (rs1.next()) out.println(rs1.getInt(1) + " " + rs1.getString(2) + " " + rs1.getString(3));
-				else out.println("incorrect password");
+				else {
+					out.println("incorrect password");
+					return;
+				}
 			}
-			else
-				out.println("no such login registered");			
+			else {
+				out.println("no such login registered");
+				return;
+			}
 
 			Controller.currentUser = login;
 			response.sendRedirect("mainPage.jsp");

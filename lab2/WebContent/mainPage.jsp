@@ -37,6 +37,18 @@
     </form>
 	    		</td>
 	    	</tr>
+	    	<tr>
+	    		<td>
+	    		<form action="AddPreferenceServlet">
+      <input type=submit value="Add preferences">
+    </form>
+	    		</td>
+	    		<td>
+	    		<form action="RemovePreferenceServlet">
+      <input type=submit value="Remove preferences">
+    </form>
+	    		</td>
+	    	</tr>
     	</table>
 	</div>
 
